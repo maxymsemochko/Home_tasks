@@ -24,7 +24,10 @@ public class Main {
                 brick[i]=Integer.parseInt(br.readLine());
             }
         }
-        Arrays.sort(brick);
+        int a = brick[0];
+        int b = brick[1];
+        int c = brick[2];
+
 
 
         System.out.println("Please input height of hole");
@@ -38,14 +41,11 @@ public class Main {
                 hole[i]=Integer.parseInt(br.readLine());
             }
         }
-        Arrays.sort(hole);
+        int x = hole[0];
+        int y = hole[1];
 
-        if (brick[2]<=hole[1]&brick[1]<=hole[0]|
-                brick[1]<=hole[1]&brick[2]<=hole[0]|
-                brick[2]<=hole[1]&brick[0]<=hole[0]|
-                brick[0]<=hole[1]&brick[2]<=hole[0]|
-                brick[0]<=hole[1]&brick[1]<=hole[0]|
-                brick[1]<=hole[1]&brick[0]<=hole[0])
+
+        if(c<=y&b<=x|b<=y&c<=x|c<=y&a<=x|a<=y&c<=x|a<=y&b<=x|b<=y&a<=x)
         {
             System.out.println("Brick entered");
         }
