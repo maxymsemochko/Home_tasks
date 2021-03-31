@@ -10,9 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("whether the brick will pass into the hole?");
-        int x,y;
-
+        System.out.println("Whether the brick will pass into the hole?");
 
         int[] brick = new int[3];
         int[] hole = new int[2];
