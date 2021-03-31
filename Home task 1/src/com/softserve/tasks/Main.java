@@ -12,38 +12,48 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Whether the brick will pass into the hole?");
 
-        int[] brick = new int[3];
-        int[] hole = new int[2];
 
-        for (int i = 0; i < brick.length; i++) {
-            System.out.println("Please enter a "+(i+1)+" side of brick.");
-            brick[i]= Integer.parseInt(br.readLine());
-            if (brick[i]<=0)
-            {
-                System.out.println("You entered incorrect number, please enter number >0");
-                brick[i]=Integer.parseInt(br.readLine());
-            }
+        System.out.println("Please enter first side of brick.");
+        int a = Integer.parseInt(br.readLine());
+        if (a<=0)
+        {
+            System.out.println("You entered incorrect number, please enter number >0");
+            a=Integer.parseInt(br.readLine());
         }
-        int a = brick[0];
-        int b = brick[1];
-        int c = brick[2];
+
+        System.out.println("Please enter second side of brick.");
+        int b = Integer.parseInt(br.readLine());
+        if (b<=0)
+        {
+            System.out.println("You entered incorrect number, please enter number >0");
+            b=Integer.parseInt(br.readLine());
+        }
+
+        System.out.println("Please enter third side of brick.");
+        int c = Integer.parseInt(br.readLine());
+        if (c<=0)
+        {
+            System.out.println("You entered incorrect number, please enter number >0");
+            c=Integer.parseInt(br.readLine());
+        }
 
 
 
         System.out.println("Please input height of hole");
-
-        for (int i = 0; i < hole.length ; i++) {
-            System.out.println("Please enter a "+(i+1)+" side of hole.");
-            hole[i]=Integer.parseInt(br.readLine());
-            if (hole[i]<=0)
-            {
-                System.out.println("You entered incorrect number, please enter number >0");
-                hole[i]=Integer.parseInt(br.readLine());
-            }
+        int x = Integer.parseInt(br.readLine());
+        if (x<=0)
+        {
+            System.out.println("You entered incorrect number, please enter number >0");
+            x=Integer.parseInt(br.readLine());
         }
-        int x = hole[0];
-        int y = hole[1];
 
+        System.out.println("Please input width of hole");
+        int y = Integer.parseInt(br.readLine());
+        if (y<=0)
+        {
+            System.out.println("You entered incorrect number, please enter number >0");
+            y=Integer.parseInt(br.readLine());
+        }
 
         if(c<=y&b<=x|b<=y&c<=x|c<=y&a<=x|a<=y&c<=x|a<=y&b<=x|b<=y&a<=x)
         {
