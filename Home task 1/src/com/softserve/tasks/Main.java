@@ -42,7 +42,12 @@ public class Main {
         }
         Arrays.sort(hole);
 
-        if (brick[2]<hole[1]|brick[1]<hole[0]|brick[0]<hole[0])
+        if (brick[2]<=hole[1]&brick[1]<=hole[0]|
+                brick[1]<=hole[1]&brick[2]<=hole[0]|
+                brick[2]<=hole[1]&brick[0]<=hole[0]|
+                brick[0]<=hole[1]&brick[2]<=hole[0]|
+                brick[0]<=hole[1]&brick[1]<=hole[0]|
+                brick[1]<=hole[1]&brick[0]<=hole[0])
         {
             System.out.println("Brick entered");
         }
