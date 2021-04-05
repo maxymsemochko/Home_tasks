@@ -1,6 +1,9 @@
 package com.softserve.tasks;
 
+import java.util.Calendar;
+
 public class Person {
+    private int currentYear = Calendar.getInstance().get(Calendar.YEAR);
     private String name;
     private int birthYear;
 
@@ -26,8 +29,8 @@ public class Person {
         this.birthYear = birthYear;
     }
 
-    public int age(int currentYear){
-        return  currentYear - this.birthYear;
+    public int age(){
+        return  this.currentYear - this.birthYear;
     }
 
     public void input(String name, int birthYear){
@@ -35,19 +38,21 @@ public class Person {
         setBirthYear(birthYear);
     }
 
-    public void output(int currentYear){
+    public void output(){
         System.out.println("Info about person");
         System.out.println("Name: "+this.name);
         System.out.println("Birthday year: "+ birthYear);
-        System.out.println("Age: "+age(currentYear));
+        System.out.println("Age: "+age());
     }
 
     public void changeName(String name){
         this.name = name;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Person " +
+                "name is " + name +
+                ", age=" + age();
+    }
 }

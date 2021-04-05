@@ -1,16 +1,14 @@
 package com.softserve.tasks;
 
-import java.util.Calendar;
-
 public class Main {
 
     public static void main(String[] args) {
-	int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
 
 	Person person1 = new Person();
 
 	person1.input("Ivan", 2002);
-	person1.output(currentYear);
+	person1.output();
 
 	Person person2 = new Person();
 	person2.setName("Petro");
@@ -21,16 +19,18 @@ public class Main {
 
 	Person person3 = new Person();
 	person3.input("Michael", 2000);
-	System.out.printf("%s is %d years old\n", person3.getName(),person3.age(currentYear));
-	person3.output(currentYear);
+	System.out.printf("%s is %d years old\n", person3.getName(),person3.age());
+	person3.output();
 
 	Person person4 = new Person();
 	person4.input("Bodya", 1998);
-	person4.output(currentYear);
+	person4.output();
 
 	Person person5 = new Person();
 	person5.input("Andriy", 2010);
-	person5.output(currentYear);
+	person5.output();
+
+		System.out.println(person5);
 
 
 
