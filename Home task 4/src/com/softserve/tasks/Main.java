@@ -21,6 +21,7 @@ public class Main {
 
 	Person person3 = new Person();
 	person3.input("Michael", 2000);
+	System.out.printf("%s is %d years old\n", person3.getName(),person3.age(currentYear));
 	person3.output(currentYear);
 
 	Person person4 = new Person();
