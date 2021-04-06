@@ -3,7 +3,7 @@ package com.softserve.tasks;
 public class ContractEmployee extends Employee implements IEmlpoyee{
 
     protected int salary = 2500;
-
+    protected String federalTaxIdMember;
     public ContractEmployee(int salary) {
         this.salary = salary;
     }

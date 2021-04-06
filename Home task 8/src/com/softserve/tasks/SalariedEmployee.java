@@ -3,6 +3,7 @@ package com.softserve.tasks;
 public class SalariedEmployee extends Employee implements IEmlpoyee{
     protected int hoursWorked;
     protected double hoursRate;
+    protected String socialSecurityNumber;
 
     public SalariedEmployee(String name, String employeedId, int hoursWorked, double hoursRate) {
         super(employeedId, name);

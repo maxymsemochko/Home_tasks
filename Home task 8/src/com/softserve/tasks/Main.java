@@ -17,8 +17,6 @@ class Main {
         for (int i = 0; i < employees.length; i++) {
             System.out.println(employees[i]);
         }
-
-
     }
 
 }
