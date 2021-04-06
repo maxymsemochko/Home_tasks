@@ -10,17 +10,17 @@ public class Main {
         chicken.setLayEggs(true);
 
         NonFlyingBird penguin = new NonFlyingBird();
-        chicken.setName("Penguin");
+        penguin.setName("Penguin");
         penguin.setFeathers(false);
         penguin.setLayEggs(true);
 
         FlyingBird eagle = new FlyingBird();
-        chicken.setName("Eagle");
+        eagle.setName("Eagle");
         eagle.setFeathers(true);
         eagle.setLayEggs(true);
 
         FlyingBird swallow = new FlyingBird();
-        chicken.setName("Swallow");
+        swallow.setName("Swallow");
         swallow.setFeathers(true);
         swallow.setLayEggs(true);
 
@@ -33,8 +33,17 @@ public class Main {
         birds[3]=eagle;
 
         for (int i = 0; i < birds.length; i++) {
+
+            if (birds[i].isFeathers())
+            {
+                System.out.println("I'm "+birds[i].getName()+" and i have feathers");
+            }
+            else
+            {
+                System.out.println("I'm "+birds[i].getName()+" and i don't have feathers");
+            }
             birds[i].fly();
-            System.out.println(birds);
+            System.out.println();
         }
 
 

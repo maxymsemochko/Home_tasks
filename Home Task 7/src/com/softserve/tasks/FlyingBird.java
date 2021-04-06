@@ -7,6 +7,6 @@ public class FlyingBird extends Bird{
 
     @Override
     void fly() {
-        System.out.println("I'm flying bord");
+        System.out.println("I'm flying bird");
     }
 }
