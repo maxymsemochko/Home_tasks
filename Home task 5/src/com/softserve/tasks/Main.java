@@ -9,17 +9,12 @@ import java.util.Arrays;
 
 public class Main {
    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    public static void task1_1() throws IOException {
-        System.out.println("Please input 3 float numbers to do my task");
-        float a = Float.parseFloat(br.readLine());
-        float b = Float.parseFloat(br.readLine());
-        float c = Float.parseFloat(br.readLine());
-
+    public static String task1_1(float a, float b, float c) throws IOException {
 
         if ((a >= -5 & a <= 5) && (b >= -5 & b <= 5) && (c >= -5 & c <= 5))
-            System.out.println("All numbers belong to the range [-5;5]");
+            return "All numbers belong to the range [-5;5]";
         else
-            System.out.println("One or more numbers don't belong to the range [-5;5]");
+            return "One or more numbers don't belong to the range [-5;5]";
 
     }
 
@@ -67,10 +62,17 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        task1_1();
+        System.out.println("Please input 3 float numbers to do my task");
+        float a1 = Float.parseFloat(br.readLine());
+        float b1 = Float.parseFloat(br.readLine());
+        float c1 = Float.parseFloat(br.readLine());
+        System.out.println(task1_1(a1,b1,c1));
+
+
         task1_2();
+
+
         task1_3();
 
 
