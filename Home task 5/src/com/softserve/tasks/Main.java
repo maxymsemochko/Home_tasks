@@ -98,6 +98,9 @@ public class Main {
 
         if (dog3.getAge()> dog1.getAge()&&dog3.getAge()> dog2.getAge())
             System.out.printf("%s is %s and his age is %d and he is the oldest dog\n",dog3.getName(),dog3.getBreed(),dog3.getAge());
+        if (dog1.getAge()==dog2.getAge()&&dog1.getAge()==dog3.getAge()){
+            System.out.println("All dogs are same age");
+        }
 
 
 
